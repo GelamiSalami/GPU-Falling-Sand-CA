@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: 300;
+	letter-spacing: 0.025em;
+	line-height: 1.65;
+}
+
+#hero {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+#canvas-container {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#main-canvas {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: unset;
+	outline: none;
+}
+
+#title {
+	position: absolute;
+	color: white;
+	font-weight: 300;
+	font-size: 4em;
+	letter-spacing: 0.1em;
+	user-select: none;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.8);
+	transform: translateY(-50%);
+}
+
+#material-buttons {
+	position: absolute;
+	display: flex;
+	flex-direction: column-reverse;
+	bottom: 0;
+	right: 0;
+	margin: 0 1em 1em 0;
+}
+
+#material-buttons > div {
+	width: 2.35em;
+	height: 2.35em;
+	background: white;
+	border-radius: 25%;
+/*	border: 0.3em solid white;*/
+	margin: 0.5em;
+	margin-left: auto;
+}
+
+#material-buttons > input {
+/*	margin-left: auto;*/
+	witdh: 50%;
+	margin: 0.5em;
+}
+
+#material-buttons ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+#material-buttons li {
+	display: block;
+	list-style: none;
+}
+
+#material-buttons ul li a {
+	display: block;
+	width: 1.85em;
+	height: 1.85em;
+	border-radius: 100%;
+	border: 0.25em solid white;
+	margin: 0.5em;
+	background: white;
+}
+
+#material-buttons ul li a::before {
+	content: "";
+}
+
+#material-buttons ul li a.selected {
+	border-radius: 20%;
+}
+
+#material-buttons ul li a[data-type="0"] {
+	background-color: rgb(31, 34, 36);
+	background:
+	repeating-conic-gradient(
+		#ccc 0 90deg,
+		rgb(31, 34, 36) 0 180deg) 
+		0 0 / 25% 25%;
+	background-size: 100% 100%;
+}
+
+#material-buttons ul li a[data-type="1"] {
+	background: rgb(98, 98, 98);
+}
+
+#material-buttons ul li a[data-type="2"] {
+	background: rgb(98, 170, 225);
+}
+
+#material-buttons ul li a[data-type="3"] {
+	background: rgb(225, 55, 22);
+}
+
+#material-buttons ul li a[data-type="4"] {
+	background: rgb(220, 170, 90);
+}
+
+#material-buttons ul li a[data-type="5"] {
+	background: linear-gradient(90deg,
+		rgba(255,0,0,1) 0%,
+		rgba(255,154,0,1) 10%,
+		rgba(208,222,33,1) 20%,
+		rgba(79,220,74,1) 30%,
+		rgba(63,218,216,1) 40%,
+		rgba(47,201,226,1) 50%,
+		rgba(28,127,238,1) 60%,
+		rgba(95,21,242,1) 70%,
+		rgba(186,12,248,1) 80%,
+		rgba(251,7,217,1) 90%,
+		rgba(255,0,0,1) 100%);
+}
+
+#material-buttons ul li a[data-type="6"] {
+	background: rgb(55, 70, 98);
+}
+
+#material-buttons ul li a[data-type="7"] {
+	background: rgb(20, 21, 22);
+}
+
+input[type=range].vertical {
+/*	position: absolute;
+	top: 40%;*/
+	display: inline-block;
+	transform-origin: 100% 50%;
+	transform: rotate(270deg) translateX(100%);
+	-moz-transform: rotate(270deg) translateX(100%);
+}
