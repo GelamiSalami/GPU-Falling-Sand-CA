@@ -41,7 +41,7 @@ body {
 	position: absolute;
 	color: white;
 	font-weight: 300;
-	font-size: 4em;
+	font-size: min(10vw, 4em);
 	letter-spacing: 0.1em;
 	user-select: none;
 	text-transform: uppercase;
@@ -93,6 +93,19 @@ body {
 	border: 0.25em solid white;
 	margin: 0.5em;
 	background: white;
+}
+
+@media screen and (max-width: 736px) {
+	#material-buttons ul {
+		flex-direction: column-reverse;
+	}
+
+	#material-buttons ul li a {
+		width: 1.5em;
+		height: 1.5em;
+		border: 0.2em solid white;
+		margin: 0.25em;
+	}
 }
 
 #material-buttons ul li a::before {
