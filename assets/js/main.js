@@ -81,11 +81,14 @@ function hashf(p)
 }
 
 const title = document.getElementById("title");
+const githubIcon = document.getElementById("github-icon");
 
 const urlParams = new URLSearchParams(window.location.search);
 
 if (!urlParams.has("header")) {
 	title.style.display = "none";
+} else {
+	githubIcon.style.display = "none";
 }
 
 const container = document.getElementById("canvas-container");

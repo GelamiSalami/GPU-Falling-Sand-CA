@@ -49,6 +49,25 @@ body {
 	transform: translateY(-50%);
 }
 
+#github-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2.5em;
+	height: 2.5em;
+	margin: 0.75em;
+	background-image: url(../images/github-mark-white.svg);
+	background-size: cover;
+	border-radius: 100%;
+}
+
+@media screen and (max-width: 736px) {
+	#github-icon {
+		width: 2.25em;
+		height: 2.25em;
+	}
+}
+
 #material-buttons {
 	position: absolute;
 	display: flex;
